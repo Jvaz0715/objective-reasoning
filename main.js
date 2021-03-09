@@ -2,6 +2,28 @@
 // │ Your code here! │	
 // └─────────────────┘
 
+function isAdmin(userObj) {
+    if (userObj.userRole === 'ADMIN') {
+        return true;
+    } else { 
+        return false;
+    }
+
+}
+
+function getEmail(userObj) {
+    let first = userObj.firstName;
+    let last = userObj.lastName;
+    let domain = '@codeimmersives.com'
+    if ( first !== undefined && last !== undefined){
+        return `${first}.${last}${domain}`
+    }
+    
+}
+
+function getPlaylistLength() {
+
+}
 
 
 // ┌─────────────────────────────────────┐
