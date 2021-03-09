@@ -18,8 +18,9 @@ function getEmail(userObj) {
 }  
 
 
-function getPlaylistLength() {
-
+function getPlaylistLength(userObj) {
+    let numSongs = userObj.songs.length;
+    return numSongs;
 }
 
 
