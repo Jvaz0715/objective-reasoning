@@ -12,14 +12,11 @@ function isAdmin(userObj) {
 }
 
 function getEmail(userObj) {
-    let first = userObj.firstName;
-    let last = userObj.lastName;
-    let domain = '@codeimmersives.com'
-    if ( first !== undefined && last !== undefined){
-        return `${first}.${last}${domain}`
-    }
-    
-}
+    let first = userObj.firstName.toLowerCase();
+    let last = userObj.lastName.toLowerCase();
+    return `${first}.${last}@codeimmersives.com`;
+}  
+
 
 function getPlaylistLength() {
 
