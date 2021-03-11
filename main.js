@@ -23,18 +23,27 @@ function getPlaylistLength(userObj) {
 }
 
 function getHardestHomework(array) {
-    let highestAverageScore = 0;
-    let lowestAverageScore = 0;
+    let lowestAverage = 100;
     let hardestAssignment = '';
 
-    for (const grade of array) {
-        if (grade.averageScore > highestAverageScore) {
-            lowestAverageScore = grade.averageScore;
-            hardestAssignment = grade.name;
+    for (const average of array) {
+        if (average.averageScore < lowestAverage) {
+            lowestAverage = average.averageScore;
+            hardestAssignment = average.name;
         }
     }
     return hardestAssignment;
 }
+
+//console.log(getHardestHomework([{ name: 'homework 1', averageScore: 99 }, { name: 'homework 2', averageScore: 1 }]))
+
+function createPhonebook(arr1, arr2) {
+    let newArray = [];
+
+
+}
+
+//console.log(createPhonebook(['Jimothy', 'Maria', 'Karl'], ['123-456-7890', '000-000-0000', '999-888-7766']))
 
 
 // ┌─────────────────────────────────────┐
