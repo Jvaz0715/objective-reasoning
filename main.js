@@ -8,7 +8,6 @@ function isAdmin(userObj) {
     } else { 
         return false;
     }
-
 }
 
 function getEmail(userObj) {
@@ -21,6 +20,20 @@ function getEmail(userObj) {
 function getPlaylistLength(userObj) {
     let numSongs = userObj.songs.length;
     return numSongs;
+}
+
+function getHardestHomework(array) {
+    let highestAverageScore = 0;
+    let lowestAverageScore = 0;
+    let hardestAssignment = '';
+
+    for (const grade of array) {
+        if (grade.averageScore > highestAverageScore) {
+            lowestAverageScore = grade.averageScore;
+            hardestAssignment = grade.name;
+        }
+    }
+    return hardestAssignment;
 }
 
 
