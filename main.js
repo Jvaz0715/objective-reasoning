@@ -35,15 +35,17 @@ function getHardestHomework(array) {
     return hardestAssignment;
 }
 
-//console.log(getHardestHomework([{ name: 'homework 1', averageScore: 99 }, { name: 'homework 2', averageScore: 1 }]))
+console.log(getHardestHomework([{ name: 'homework 1', averageScore: 99 }, { name: 'homework 2', averageScore: 1 }]))
 
 function createPhonebook(arr1, arr2) {
-    let newArray = [];
-
-
+    let phoneBook = [];
+    for (let i = 0; i < arr1.length; i++) {
+        phoneBook.push(arr1[i] + ' : ' + arr2[i])
+    }
+    return phoneBook;
 }
 
-//console.log(createPhonebook(['Jimothy', 'Maria', 'Karl'], ['123-456-7890', '000-000-0000', '999-888-7766']))
+console.log(createPhonebook(['Jimothy', 'Maria', 'Karl'], ['123-456-7890', '000-000-0000', '999-888-7766']))
 
 
 // ┌─────────────────────────────────────┐
